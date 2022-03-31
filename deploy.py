@@ -29,6 +29,7 @@ os.system('venv/bin/pip install -r requirements.txt')
 os.environ['PATH'] = REAL_PATH  # Restore the PATH variable to its original value
 
 # Configure Application
+os.system('rm .env')
 secret_key = secrets.token_hex(32)
 os.system(f'echo \'SECRET_KEY={secret_key}\' > .env')
 while True:
