@@ -42,7 +42,7 @@ while True:
         print('Passwords do not match!')
         continue
     break
-os.system(f'echo \'{{"admin":"{admin_password}"}}\' >> .env')
+os.system(f'echo \'USERS={{"admin":"{admin_password}"}}\' >> .env')
 
 # Write SystemD Service Unit
 service_file = '/etc/systemd/system/login_app.service'
